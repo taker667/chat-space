@@ -1,0 +1,49 @@
+.Main_chat
+  .Main_chat__right-header
+    .Group-info
+      .Group-info__name
+        techcamp
+      %ul.Group-info__member-list
+        %li.Group-info__list-top Member：
+        %li.Group-info__member take
+    = link_to "#", class: "Edit-btn" do
+      Edit
+
+
+  .Main_chat__message-field
+    .Message-info
+      .Message-info__name
+        take 
+      .Message-info__date
+        2020年07月24日 06時22分
+    .Message
+      おはよう！
+
+    .Message-info
+      .Message-info__name
+        take 
+      .Message-info__date
+        2020年07月24日 06時22分
+    .Message
+      おはよう！
+    
+    .Message-info
+      .Message-info__name
+        take 
+      .Message-info__date
+        2020年07月24日 06時22分
+    .Message
+      おはよう！
+
+  .Main_chat__footer
+    %form.Form-info
+      .Form-info__contents
+        %input.Form-info__message-box{placeholder: "type a message", type: "text"}        
+
+        %label{class: "Form-info__input-image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "Form-info__input-file"}
+
+      %input.Form-info__submit-btn{name: "commit", type: "submit", value: "Send"}
+      
+
