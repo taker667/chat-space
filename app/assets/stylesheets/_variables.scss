@@ -1,0 +1,19 @@
+@mixin hw($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+$left-header-background-color: #253141;
+$Side_bar-font-color: #ffffff;
+$group-list-background-color: #2f3e51;
+
+$right-header-background-color: #ffffff;
+$right-header-border-color: #eee;
+$Main_chat-name-font-color: #333333;
+$Main_chat-btn-color: #38aef0;
+$Main_chat-detail-font-color: #999999;
+$message-field-background-color: #fafafa;
+$message-field-font-color: #434A54;
+$right-footer-background-color: #dddddd;
+$right-footer-contents-background-color: #fff;
+$right-footer-btn-font-color: #fff;

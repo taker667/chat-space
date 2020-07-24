@@ -6,16 +6,6 @@
   display: flex;
 }
 
-@mixin hw($height, $width) {
-  height: $height;
-  width: $width;
-}
-
-//色の指定(Side_bar)
-$left-header-background-color: #253141;
-$Side_bar-font-color: #ffffff;
-$group-list-background-color: #2f3e51;
-
 .Side_bar{
   width: 300px;
 
@@ -46,7 +36,6 @@ $group-list-background-color: #2f3e51;
           margin-left: 5px;
         }
       }
-
   }
   &__group-list{
     height: calc(100vh - 100px);
@@ -68,22 +57,8 @@ $group-list-background-color: #2f3e51;
   }
 }
 
-//色の指定(Main_chat)
-$right-header-background-color: #ffffff;
-$right-header-border-color: #eee;
-$Main_chat-name-font-color: #333333;
-$Main_chat-btn-color: #38aef0;
-$Main_chat-detail-font-color: #999999;
-$message-field-background-color: #fafafa;
-$message-field-font-color: #434A54;
-$right-footer-background-color: #dddddd;
-$right-footer-contents-background-color: #fff;
-$right-footer-btn-font-color: #fff;
-
-
 .Main_chat{
   width: calc(100vw - 300px);
-
 
   &__right-header{
     height: 100px;
@@ -121,7 +96,6 @@ $right-footer-btn-font-color: #fff;
         text-decoration: none;
         font-size: 16px;
       }
-
   }
   &__message-field{
     height: calc(100vh - 190px);
@@ -148,7 +122,6 @@ $right-footer-btn-font-color: #fff;
         color: $message-field-font-color;
         font-size: 14px;
       }
-    
   }
   &__footer{
     height: 90px;
