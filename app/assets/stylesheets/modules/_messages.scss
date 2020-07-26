@@ -41,9 +41,11 @@
     height: calc(100vh - 100px);
     background-color: $group-list-background-color;
     overflow: scroll;
+    padding: 0 20px;
 
       .Group{
-        padding: 20px;
+        padding: 20px 0 40px;
+        text-decoration: none;
         
         &__name{
           color: $Side_bar-font-color;
@@ -53,7 +55,6 @@
         &__top-message{
           color: $Side_bar-font-color;
           font-size: 11px;
-          margin-bottom: 20px;
         }
       }
   }
