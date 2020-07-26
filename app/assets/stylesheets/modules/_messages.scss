@@ -42,14 +42,15 @@
     background-color: $group-list-background-color;
 
       .Group{
-        color: $Side_bar-font-color;
         padding: 20px;
         
         &__name{
+          color: $Side_bar-font-color;
           font-size: 15px;
           margin-bottom: 5px;
         }
         &__top-message{
+          color: $Side_bar-font-color;
           font-size: 11px;
           margin-bottom: 20px;
         }
