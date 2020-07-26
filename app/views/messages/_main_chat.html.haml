@@ -2,48 +2,25 @@
   .Main_chat__right-header
     .Group-info
       .Group-info__name
-        techcamp
+        =@group.name
       %ul.Group-info__member-list
         %li.Group-info__list-top Member：
-        %li.Group-info__member take
-    = link_to "#", class: "Edit-btn" do
+
+        - @group.group_users.each do |group|
+          %li.Group-info__member 
+            = group.user.name
+    = link_to edit_group_path(@group), class: "Edit-btn" do
       Edit
 
-
   .Main_chat__message-field
-    .Message-info
-      .Message-info__name
-        take 
-      .Message-info__date
-        2020年07月24日 06時22分
-    .Message
-      おはよう！
+    = render @messages
 
-    .Message-info
-      .Message-info__name
-        take 
-      .Message-info__date
-        2020年07月24日 06時22分
-    .Message
-      おはよう！
-    
-    .Message-info
-      .Message-info__name
-        take 
-      .Message-info__date
-        2020年07月24日 06時22分
-    .Message
-      おはよう！
-
-  .Main_chat__footer
-    %form.Form-info
+  .Main_chat__footer 
+    = form_with model: [@group, @message], html: {class: "Form-info"}, local: true do |f|
       .Form-info__contents
-        %input.Form-info__message-box{placeholder: "type a message", type: "text"}        
-
-        %label{class: "Form-info__input-image"}
+        = f.text_field :body, class: 'Form-info__message-box', placeholder: 'type a message'
+        = f.label :image, class: 'Form-info__input-image' do
           = icon('far', 'image')
-          %input{type: "file", class: "Form-info__input-file"}
-
-      %input.Form-info__submit-btn{name: "commit", type: "submit", value: "Send"}
-      
+          = f.file_field :image, class: 'Form-info__input-file'
+      = f.submit 'Send', class: 'Form-info__submit-btn'
 
